@@ -16,7 +16,9 @@
     <div id="menu" class="mt-5 mx-auto lg:mt-0 hidden lg:block justify-center">
       <ul class="lg:flex">
         <li class="mx-1 px-5 py-2">
-          <a href="/task-manager#overview" class="hover:text-[#1C8DA3] navbar-item highlight">Overview</a>
+          <a href="/task-manager#overview" class="hover:text-[#1C8DA3] navbar-item highlight"
+            >Overview</a
+          >
         </li>
         <li class="mx-1 px-5 py-2">
           <a href="/task-manager#pricing" class="hover:text-[#1C8DA3] navbar-item">Pricing</a>
@@ -107,26 +109,39 @@
 <!-- pricing -->
 <section id="pricing" class="pt-16">
   <h2 class="sec-heading"><span class="sec-heading-gradient">Pricing</span></h2>
+
+  <div class="flex justify-center prici">
+    <mat-button-toggle-group
+      name="pricingPlan"
+      aria-label="Pricing Plan"
+      [hideSingleSelectionIndicator]="true"
+      [value]="planRange()"
+      (valueChange)="updatePlanRange($event)"
+      class="billing-toggle"
+    >
+      <mat-button-toggle value="monthly">Monthly</mat-button-toggle>
+      <mat-button-toggle value="annually">Annually</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
   <div class="container mx-auto px-6 lg:px-2 flex justify-center gap-15">
-      <app-pricing-component [pricing]="economyPlan"></app-pricing-component>
-      <app-pricing-component [pricing]="premiumPlan"></app-pricing-component>
-      <app-pricing-component [pricing]="plusPlan"></app-pricing-component>
-      <app-pricing-component [pricing]="customerPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="economyPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="premiumPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="plusPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="customerPlan"></app-pricing-component>
   </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="pt-16">
-    <h2 class="sec-heading"><span class="sec-heading-gradient">Frequently Asked Questions</span></h2>
-    <div class="container mx-auto px-6 flex justify-center">
-        <app-faq-component></app-faq-component>        
-    </div>
+  <h2 class="sec-heading"><span class="sec-heading-gradient">Frequently Asked Questions</span></h2>
+  <div class="container mx-auto px-6 flex justify-center">
+    <app-faq-component></app-faq-component>
+  </div>
 </section>
 
 <!-- contact -->
-<section id="contact" class="pt-16">
-
-</section>
+<section id="contact" class="pt-16"></section>
 
 <app-footer-component></app-footer-component>
 

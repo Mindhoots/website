@@ -1,0 +1,26 @@
+.billing-toggle {
+  border-radius: 999px;
+  border-color: #e9f8fb !important;
+  border : solid;
+  padding: 4px;
+  margin-bottom: 20px;
+}
+
+.billing-toggle .mat-button-toggle {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 20px;
+  font-weight: 500;
+}
+
+.billing-toggle .mat-button-toggle-checked {
+  background: #e9f8fb;
+}
+
+.billing-toggle .mat-button-toggle:not(.mat-button-toggle-checked):hover {
+  background: #e9f8fb;
+}
+
+.mat-button-toggle-ripple {
+  display: none;
+}
