@@ -1,23 +1,101 @@
 <nav class="bg-[#fafafa] navbar lg:bg-opacity-95 font-popps fixed top-0 z-10 w-full">
-    <div class="lg:flex items-center mx-auto px-5 py-4 lg:px-0">
-        <div class="flex justify-between">
-            <a href="#home">
-                <img src="/public/assets/images/mh_logo.png" class="lg:ml-4 w-30 h-10" alt="logo">
-            </a>
-            <button (onclick)="toggleMenu()" class="text-[#1C8DA3] lg:hidden active:scale-90 transition-transform">
-                <i class="material-icons" style="font-weight: 550; font-size: 30px;">menu</i>
-            </button>
-        </div>
-
-        <div id="menu" class="ml-auto mt-5 lg:mt-0 hidden lg:block">
-            <ul class="lg:flex">
-                <li class="mx-1 px-6 py-2"><a href="#home" class="hover:text-[#1C8DA3]  navbar-item highlight">HOME</a></li>
-                <li class="mx-1 px-6 py-2"><a href="#about_us" class="hover:text-[#1C8DA3] navbar-item">ABOUT US</a></li>
-                <li class="mx-1 px-6 py-2"><a href="#process" class="hover:text-[#1C8DA3] navbar-item">SERVICES</a></li>
-                <li class="mx-1 px-6 py-2"><a href="#products" class="hover:text-[#1C8DA3] navbar-item">PRODUCTS</a></li>
-                <li class=""><a href="#contact"><button class="lg:rounded-md lg:bg-linear-to-r from-[#0A353D] to-[#1C8DA3] mx-1 px-6 py-2 lg:py-2 lg:px-5  lg:mr-4 lg:text-white lg:shadow-lg ">CONTACT US</button></a></li>
-            </ul>
-        </div>
-
+  <div class="lg:flex items-center mx-auto px-5 py-4 lg:px-0">
+    <div class="flex justify-between">
+      <a href="#home">
+        <img src="assets/images/mh_logo.png" class="lg:ml-4 w-30 h-10" alt="logo" />
+      </a>
+      <button
+        (click)="showMenu = !showMenu"
+        class="text-[#1C8DA3] lg:hidden active:scale-90 transition-transform"
+      >
+        <i class="material-icons sm:text-3xl cursor-pointer z-50 font-bold">menu</i>
+      </button>
     </div>
+
+    <div id="menu" class="ml-auto mt-5 lg:mt-0 hidden lg:block">
+      <ul class="lg:flex">
+        <li class="mx-1 px-6 py-2">
+          <a href="#home" class="hover:text-[#1C8DA3] navbar-item highlight">HOME</a>
+        </li>
+        <li class="mx-1 px-6 py-2">
+          <a href="#about_us" class="hover:text-[#1C8DA3] navbar-item">ABOUT US</a>
+        </li>
+        <li class="mx-1 px-6 py-2">
+          <a href="#process" class="hover:text-[#1C8DA3] navbar-item">SERVICES</a>
+        </li>
+        <li class="mx-1 px-6 py-2">
+          <a href="#products" class="hover:text-[#1C8DA3] navbar-item">PRODUCTS</a>
+        </li>
+        <li class="">
+          <a href="#contact"
+            ><button
+              class="lg:rounded-md lg:bg-linear-to-r from-[#0A353D] to-[#1C8DA3] mx-1 px-6 py-2 lg:py-2 lg:px-5 lg:mr-4 lg:text-white lg:shadow-lg"
+            >
+              CONTACT US
+            </button></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- mobile view -->
+    @if (showMenu) {
+      <div
+        id="nav-menu"
+        class="absolute top-0 left-0 min-h-[80vh] h-full w-full bg-[#e9f8fb] backdrop-blur-md flex items-center justify-center duration-300 overflow-hidden"
+      >
+        <!-- close button -->
+        <button
+          (click)="showMenu = !showMenu"
+          class="text-[#1C8DA3] lg:hidden active:scale-90 transition-transform absolute top-5 right-5"
+        >
+          <i class="material-icons sm:text-3xl cursor-pointer z-50 font-bold">close</i>
+        </button>
+
+        <!-- navigation items -->
+        <ul class="flex flex-col items-center gap-8">
+          <li class="mx-1 px-6 py-2">
+            <a
+              (click)="showMenu = !showMenu; $event.stopPropagation()"
+              href="#home"
+              class="hover:text-[#1C8DA3] navbar-item highlight"
+              >HOME</a
+            >
+          </li>
+          <li class="mx-1 px-6 py-2">
+            <a
+              href="#about_us"
+              (click)="showMenu = !showMenu; $event.stopPropagation()"
+              class="hover:text-[#1C8DA3] navbar-item"
+              >ABOUT US</a
+            >
+          </li>
+          <li class="mx-1 px-6 py-2">
+            <a
+              (click)="showMenu = !showMenu; $event.stopPropagation()"
+              href="#process"
+              class="hover:text-[#1C8DA3] navbar-item"
+              >SERVICES</a
+            >
+          </li>
+          <li class="mx-1 px-6 py-2">
+            <a
+              (click)="showMenu = !showMenu; $event.stopPropagation()"
+              href="#products"
+              class="hover:text-[#1C8DA3] navbar-item"
+              >PRODUCTS</a
+            >
+          </li>
+          <li class="mx-1 px-6 py-2">
+            <a
+              (click)="showMenu = !showMenu; $event.stopPropagation()"
+              href="#contact"
+              class="hover:text-[#1C8DA3] navbar-item"
+              >CONTACT US</a
+            >
+          </li>
+        </ul>
+      </div>
+    }
+  </div>
 </nav>

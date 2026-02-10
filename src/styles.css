@@ -11,6 +11,7 @@
   /* --color-primary: #1c8da3;
   --color-secondary: #0a353d;
   --color-bg: #c2ecf5; */
+
 }
 
 @layer components {
@@ -132,3 +133,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.nav-menu {
+  @apply text-lg font-bold duration-300;
+}
+
+.nav-menu:hover {
+  @apply text-[#1c8da3]; 
+}

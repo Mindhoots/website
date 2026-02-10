@@ -7,17 +7,27 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar-component.css',
 })
 export class NavBarComponent {
-  
-  
-  toggleMenu() {
-    let menu: any = document.getElementById('menu');
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden')
+
+  showMenu = false;
+
+
+  toggleMenu(toOpen: boolean) {
+    console.log("toggle clicked", toOpen);
+    // let menu: any = document.getElementById('menu');
+    // if (menu.classList.contains('hidden')) {
+    //   menu.classList.remove('hidden')
+    // } else {
+    //   menu.classList.add('hidden')
+    // }
+    let navMenu: any = document.getElementById("nav-menu");
+    if (toOpen) {
+      navMenu.classList.toggle("block")
     } else {
-      menu.classList.add('hidden')
+      navMenu.classList.toggle("left-[-100%]")
     }
+
   }
 
-  
- 
+
+
 }
