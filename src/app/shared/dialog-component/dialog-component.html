@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content >
+  @for (itm of data.content; track itm; let i = $index) {
+    <h3>{{ itm.title }}</h3>
+    <p class="whitespace-pre-line pl-4 leading-relaxed" >{{itm.message}}</p>
+    <br>
+  }
+
+  <br><br>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button matButton mat-dialog-close>Close</button>
+</mat-dialog-actions>

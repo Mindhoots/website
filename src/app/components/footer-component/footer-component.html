@@ -5,7 +5,8 @@
 
     <!--   footer-right  -->
     <div class="flex flex-col lg:flex-row items-center gap-20">
-      <div class="flex flex-col justify-center items-center gap-2">
+      <div class="flex flex-col justify-start items-start gap-2 text-start">
+         <h3 class="underline font-semibold mb-1">Reach Us</h3>
         <div class="flex flex-col justify-between gap-2">
           <a href="tel:+918148138001" target="_blank">
             <div class="flex justify-start items-center">
@@ -28,13 +29,13 @@
         </div>
       </div>
 
-      <div class="">
-        <h3>Legal & Policies</h3>
-        <ul class="">
-          <li><a href="#">Terms & Condition</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Cancellation & Refund Policy</a></li>
-          <li><a href="#">Shipping Policy</a></li>
+      <div class="text-left">
+        <h3 class="underline font-semibold mb-2">Legal & Policies</h3>
+        <ul class="flex flex-col justify-start items-start">
+          <button matButton (click)="openDialog(0)">Terms & Conditions</button>
+          <button matButton (click)="openDialog(1)">Privacy Policy</button>
+          <button matButton (click)="openDialog(2)">Cancellation & Refund Policy</button>
+          <button matButton (click)="openDialog(3)">Cookie Policy</button>
         </ul>
       </div>
     </div>
