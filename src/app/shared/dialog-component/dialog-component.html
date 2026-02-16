@@ -1,12 +1,11 @@
 <h2 mat-dialog-title>{{ data.title }}</h2>
-<mat-dialog-content >
+<mat-dialog-content>
   @for (itm of data.content; track itm; let i = $index) {
-    <h3>{{ itm.title }}</h3>
-    <p class="whitespace-pre-line pl-4 leading-relaxed" >{{itm.message}}</p>
-    <br>
+    <h3 class="font-bold">{{ itm.title }}</h3>
+    <p class="whitespace-pre-line pl-4 leading-relaxed">{{ itm.message }}</p>
   }
-
-  <br><br>
+  <a href="mailto:mindhoots@gmail.com" target="_blank" class="whitespace-pre-line pl-4 leading-relaxed cursor-pointer sec-heading-gradient"> mindhoots@gmail.com </a>
+  <br/><br/>
 </mat-dialog-content>
 
 <mat-dialog-actions align="end">

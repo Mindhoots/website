@@ -1,0 +1,39 @@
+<div class="relative w-full max-w-3xl h-70 mx-auto overflow-hidden " (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
+  <!-- Images -->
+  <div
+    class="flex transition-transform duration-700 ease-in-out"
+    [style.transform]="'translateX(-' + currentIdx * 100 + '%)'"
+  >
+    @for (img of images; track img) {
+      <img [src]="img" class="w-full flex shrink-0 object-contain h-64 md:h-96" />
+    }
+  </div>
+
+  <!-- Prev Button -->
+  <button
+    (click)="prevIdx()"
+    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full hover:bg-black/60 transition"
+  >
+    ‹
+  </button>
+
+  <!-- Next Button -->
+  <button
+    (click)="nextIdx()"
+    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/40 text-white px-3 py-2 rounded-full hover:bg-black/60 transition"
+  >
+    ›
+  </button>
+
+  <!-- Dots -->
+  <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    @for (img of images; track $index; let i = $index) {
+      <div
+        (click)="goTo(i)"
+        class="w-3 h-3 rounded-full cursor-pointer transition border-l border-[#e9f8fb]"
+        [class.bg-[#e9f8fb]]="i === currentIdx"
+        [class.bg-grey]="i !== currentIdx"
+      ></div>
+    }
+  </div>
+</div>

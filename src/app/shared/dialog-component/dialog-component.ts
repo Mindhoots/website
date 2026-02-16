@@ -11,6 +11,8 @@ import { MAT_DIALOG_DATA, MatDialog, MatDialogModule } from '@angular/material/d
 })
 
 export class DialogComponent {
+
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+
 }
 
