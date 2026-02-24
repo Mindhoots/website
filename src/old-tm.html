@@ -1,0 +1,163 @@
+<!--Navigation-->
+<nav class="bg-[#fafafa] navbar lg:bg-opacity-95 font-Montserrat fixed top-0 z-10 w-full">
+  <div class="lg:flex mx-auto px-5 py-4 lg:px-0">
+    <div class="flex justify-between">
+      <a href="index.html">
+        <img src="assets/images/mh_logo.png" class="lg:ml-4 w-30 h-10" alt="logo" />
+      </a>
+      <button
+        onclick="toggleMenu()"
+        class="text-[#1C8DA3] lg:hidden active:scale-90 transition-transform"
+      >
+        <i class="material-icons" style="font-weight: 550; font-size: 30px">menu</i>
+      </button>
+    </div>
+
+    <div id="menu" class="mt-5 mx-auto lg:mt-0 hidden lg:block justify-center">
+      <ul class="lg:flex">
+        <li class="mx-1 px-5 py-2">
+          <a href="/task-manager#overview" class="hover:text-[#1C8DA3] navbar-item highlight"
+            >Overview</a
+          >
+        </li>
+        <li class="mx-1 px-5 py-2">
+          <a href="/task-manager#pricing" class="hover:text-[#1C8DA3] navbar-item">Pricing</a>
+        </li>
+        <li class="mx-1 px-5 py-2">
+          <a href="/task-manager#faq" class="hover:text-[#1C8DA3] navbar-item">FAQs</a>
+        </li>
+        <li class="mx-1 px-5 py-2">
+          <a href="/task-manager#contact" class="hover:text-[#1C8DA3] navbar-item">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- overview -->
+<section id="overview" class="pt-18">
+  <!-- <div class="w-full bg-cover bg-clip-content h-35" style="background-image: url('./assets/')"> -->
+  <div class="w-full bg-cover bg-clip-content h-35" style="background-image: url('./assets/')">
+    <div class="flex text-center justify-center items-center h-full w-full">
+      <h1 class="text-8xl lg:text-[50px] font-Montserrat">
+        <span class="text-gradient">Task Manager</span>
+      </h1>
+    </div>
+  </div>
+
+  <div style="background-color: #e9f8fb">
+    <div class="container mx-auto h-70 py-10 mt-10 px-4 grid items-center">
+      <div class="flex flex-wrap justify-center items-center">
+        <div class="w-full lg:w-1/2 lg:order-1 order-2">
+          <h1 class="product-heading">Features & Benefits</h1>
+          <hr class="product-underline" />
+          <p class="product-para">
+            <span class="font-bold">Progress Tracking</span> Clearly see task status and completion
+            levels.<br />
+            <span class="font-bold">Employee Reports</span> Get detailed performance and
+            productivity insights.<br />
+            <span class="font-bold">Smart Dashboards</span> All key data and metrics in one clear
+            view.<br />
+            <span class="font-bold">Reminders</span> Automatic alerts to ensure nothing is missed.
+          </p>
+        </div>
+        <div class="w-full order-1 lg:w-1/2">
+          <div class="flex justify-center">
+            <img src="./assets/" alt="features-benefits" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto py-10 h-70 px-4 grid items-center">
+    <div class="flex flex-wrap justify-center items-center">
+      <div class="w-full order-2 lg:w-1/2">
+        <h1 class="product-heading">One Platform. Total Visibility</h1>
+        <hr class="product-underline" />
+        <p class="product-para">
+          Manage your tasks and monitor progress anytime—on mobile, tablet, or desktop.
+        </p>
+      </div>
+      <div class="w-full order-1 lg:w-1/2">
+        <div class="flex justify-center">
+          <img src="./assets/" alt="one-platform" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: #e9f8fb">
+    <div class="container mx-auto h-70 py-10 mt-10 px-4 grid items-center">
+      <div class="flex flex-wrap justify-center items-center">
+        <div class="w-full lg:w-1/2 lg:order-1 order-2">
+          <h1 class="product-heading">Secure & Reliable</h1>
+          <hr class="product-underline" />
+          <p class="product-para">
+            Built with robust security to keep your data safe and your work uninterrupted.
+          </p>
+        </div>
+        <div class="w-full order-1 lg:w-1/2">
+          <div class="flex justify-center">
+            <img src="./assets/" alt="secure-reliable" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- pricing -->
+<section id="pricing" class="pt-16">
+  <h2 class="sec-heading"><span class="sec-heading-gradient">Pricing</span></h2>
+
+  <div class="flex justify-center prici">
+    <mat-button-toggle-group
+      name="pricingPlan"
+      aria-label="Pricing Plan"
+      [hideSingleSelectionIndicator]="true"
+      [value]="planRange()"
+      (valueChange)="updatePlanRange($event)"
+      class="billing-toggle"
+    >
+      <mat-button-toggle value="monthly">Monthly</mat-button-toggle>
+      <mat-button-toggle value="annually">Annually</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
+  <div class="container mx-auto px-6 lg:px-2 flex justify-center gap-15">
+    <app-pricing-component [pricing]="economyPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="premiumPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="plusPlan"></app-pricing-component>
+    <app-pricing-component [pricing]="customerPlan"></app-pricing-component>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="pt-16">
+  <h2 class="sec-heading"><span class="sec-heading-gradient">Frequently Asked Questions</span></h2>
+  <div class="container mx-auto px-6 flex justify-center">
+    <app-faq-component></app-faq-component>
+  </div>
+</section>
+
+<!-- contact -->
+<section id="contact" class="pt-16"></section>
+
+<app-footer-component></app-footer-component>
+
+<!-- Footer -->
+<!-- <footer id="contact" class="text-center bg-[#fafafa] py-6 text-[#4F4F4F] font-Montserrat">
+  <p class="text-sm md:text-base">
+    &copy; 2025
+    <a
+      href="https://mindhoot.com/"
+      target="_blank"
+      class="text-[#1C8DA3] font-semibold hover:underline"
+      >MindHoot Labs.</a
+    >
+    All rights reserved
+  </p>
+</footer> -->
+
+

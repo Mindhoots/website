@@ -7,7 +7,7 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-tm-component',
-  imports: [PricingComponent, FaqComponent, FooterComponent, MatButtonToggleModule],
+  imports: [PricingComponent, FaqComponent, FooterComponent, MatButtonToggleModule,],
   templateUrl: './tm-component.html',
   styleUrl: './tm-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,6 +18,10 @@ export class TmComponent {
 
   updatePlanRange(event: any) {
     this.planRange.set(event);
+  }
+
+  goToNewTab() {
+    window.open('http://mindhootlabs.cloud:8080/', '_blank');
   }
 
   /// amount in dollars
@@ -57,6 +61,7 @@ export class TmComponent {
       "Limited customization",
     ]
   };
+
   customerPlan = {
     amount: "",
     name: 'Custom',

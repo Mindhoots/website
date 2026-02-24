@@ -1,160 +1,94 @@
-<!--Navigation-->
-<nav class="bg-[#fafafa] navbar lg:bg-opacity-95 font-Montserrat fixed top-0 z-10 w-full">
-  <div class="lg:flex mx-auto px-5 py-4 lg:px-0">
-    <div class="flex justify-between">
-      <a href="index.html">
-        <img src="assets/images/mh_logo.png" class="lg:ml-4 w-30 h-10" alt="logo" />
-      </a>
-      <button
-        onclick="toggleMenu()"
-        class="text-[#1C8DA3] lg:hidden active:scale-90 transition-transform"
-      >
-        <i class="material-icons" style="font-weight: 550; font-size: 30px">menu</i>
-      </button>
-    </div>
-
-    <div id="menu" class="mt-5 mx-auto lg:mt-0 hidden lg:block justify-center">
-      <ul class="lg:flex">
-        <li class="mx-1 px-5 py-2">
-          <a href="/task-manager#overview" class="hover:text-[#1C8DA3] navbar-item highlight"
-            >Overview</a
-          >
-        </li>
-        <li class="mx-1 px-5 py-2">
-          <a href="/task-manager#pricing" class="hover:text-[#1C8DA3] navbar-item">Pricing</a>
-        </li>
-        <li class="mx-1 px-5 py-2">
-          <a href="/task-manager#faq" class="hover:text-[#1C8DA3] navbar-item">FAQs</a>
-        </li>
-        <li class="mx-1 px-5 py-2">
-          <a href="/task-manager#contact" class="hover:text-[#1C8DA3] navbar-item">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- overview -->
-<section id="overview" class="pt-18">
-  <div class="w-full bg-cover bg-clip-content h-35" style="background-image: url('./assets/')">
-    <div class="flex text-center justify-center items-center h-full w-full">
-      <h1 class="text-8xl lg:text-[50px] font-Montserrat">
-        <span class="text-gradient">Task Manager</span>
-      </h1>
-    </div>
-  </div>
-
-  <div style="background-color: #e9f8fb">
-    <div class="container mx-auto h-70 py-10 mt-10 px-4 grid items-center">
-      <div class="flex flex-wrap justify-center items-center">
-        <div class="w-full lg:w-1/2 lg:order-1 order-2">
-          <h1 class="product-heading">Features & Benefits</h1>
-          <hr class="product-underline" />
-          <p class="product-para">
-            <span class="font-bold">Progress Tracking</span> Clearly see task status and completion
-            levels.<br />
-            <span class="font-bold">Employee Reports</span> Get detailed performance and
-            productivity insights.<br />
-            <span class="font-bold">Smart Dashboards</span> All key data and metrics in one clear
-            view.<br />
-            <span class="font-bold">Reminders</span> Automatic alerts to ensure nothing is missed.
-          </p>
+<div class="bg-[#EDF7FF] font-ibm px-12">
+  <!--  hero section -->
+  <section class="pt-80 pb-40 mx-auto flex justify-center items-center">
+    <div class="w-fit">
+      <h1 class="text-9xl">WORK</h1>
+      <h1 class="text-9xl">MANAGER</h1>
+      <br />
+      <p class="text-2xl">Collaborative</p>
+      <p class="text-2xl">& Productivity Platform</p>
+      <br />
+      <div class="mt-3 text-center lg:text-left btn group cursor-pointer">
+        <div class="btn-animation group-hover:translate-x-1 ease">
+          <i class="material-icons">trending_flat</i>
         </div>
-        <div class="w-full order-1 lg:w-1/2">
-          <div class="flex justify-center">
-            <img src="./assets/" alt="features-benefits" />
-          </div>
+        Request a Demo
+      </div>
+      <p class="sec-heading-gradient mt-2 pl-15 cursor-pointer hover:underline" (click)="goToNewTab()" >Sign Up</p>
+    </div>
+
+    <div class="relative ml-5 w-1/2 h-1/2 flex items-center justify-center">
+      <img
+        class="absolute right-2 bottom-0 w-150 h-80 rounded-xl shadow-xl"
+        src="assets/images/screenshots/task-screen.png"
+        alt="task-screen"
+      />
+
+      <img
+        class="absolute w-150 h-80 rounded-xl shadow-xl"
+        src="assets/images/screenshots/project-memebers.png"
+        alt="projects-screen"
+      />
+
+      <img
+        class="absolute left-2 top-0 w-150 h-80 rounded-xl shadow-xl"
+        src="assets/images/screenshots/dashboard.png"
+        alt="dashboard-screen"
+      />
+    </div>
+  </section>
+
+  <!-- overview -->
+  <section class="mx-auto mt-25 pb-25">
+    <!-- content -->
+    <div class="mx-auto w-1/2 text-start">
+      <h1 class="text-4xl">Optimise your Management experience</h1>
+      <p class="pt-5">
+        Work Manager’s Optimized management system delivers a frictionless customer experience.
+        Increase revenue and save thousands of hours with pre-built management modules, easy access
+        to from any devices and every tasks is visible for everyone with the access.
+      </p>
+      <p class="sec-heading-gradient mt-2 cursor-pointer hover:underline">Try the Demo ></p>
+    </div>
+
+    <!--  -->
+    <div class="mx-auto flex flex-wrap justify-around items-center gap-6 lg:gap-2 py-20">
+      <div class="h-90 w-100 hover:scale-105 transition-transform duration-300 rounded-xl shadow-xl bg-white"> 
+        <img class="rounded-tl-xl rounded-tr-xl shadow-2xs" src="assets/images/screenshots/dashboard.png" alt="dashboard">
+        <h1 class="px-5 pt-3 text-xl">Flexible UI Components</h1>
+        <div class="px-5 pt-2 text-md flex justify-start items-center">
+            <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+            <p class="px-2 text-md">Progress Tracking</p>
+        </div>
+        <div class="px-5 pt-1 text-md flex justify-start items-center">
+            <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+            <p class="px-2 text-md">Employee Reports</p>
+        </div>
+        <div class="px-5 pt-1 text-md flex justify-start items-center">
+            <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+            <p class="px-2 text-md">Smart Dashboards</p>
+        </div>
+        <div class="px-5 pt-1 text-md flex justify-start items-center">
+            <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+            <p class="px-2 text-md">Reminder & Notifications</p>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="container mx-auto py-10 h-70 px-4 grid items-center">
-    <div class="flex flex-wrap justify-center items-center">
-      <div class="w-full order-2 lg:w-1/2">
-        <h1 class="product-heading">One Platform. Total Visibility</h1>
-        <hr class="product-underline" />
-        <p class="product-para">
-          Manage your tasks and monitor progress anytime—on mobile, tablet, or desktop.
-        </p>
+      <div class="h-90 w-100 hover:scale-105 transition-transform duration-300 rounded-xl shadow-xl bg-white"> 
+        <img class="rounded-tl-xl rounded-tr-xl" src="assets/images/screenshots/dashboard.png" alt="dashboard">
+        <h1 class="px-5 pt-3 text-xl">One Platform, Total Visibility</h1>
+        <p class="px-5 pt-2 text-md">With all business data are connected in one workspace, get real-time insights, from deadline to progress level, to make accurate decisions.</p>
       </div>
-      <div class="w-full order-1 lg:w-1/2">
-        <div class="flex justify-center">
-          <img src="./assets/" alt="one-platform" />
-        </div>
+      <div class="h-90 w-100 hover:scale-105 transition-transform duration-300 rounded-xl shadow-xl bg-white"> 
+        <img class="rounded-tl-xl rounded-tr-xl" src="assets/images/screenshots/dashboard.png" alt="dashboard">
+        <h1 class="px-5 pt-3 text-xl">Fast & Efficient</h1>
+        <p class="px-5 pt-2 text-md">Standardize the workflows, assigning clear ownership for the tasks for efficient and faster execution</p>
       </div>
-    </div>
-  </div>
-
-  <div style="background-color: #e9f8fb">
-    <div class="container mx-auto h-70 py-10 mt-10 px-4 grid items-center">
-      <div class="flex flex-wrap justify-center items-center">
-        <div class="w-full lg:w-1/2 lg:order-1 order-2">
-          <h1 class="product-heading">Secure & Reliable</h1>
-          <hr class="product-underline" />
-          <p class="product-para">
-            Built with robust security to keep your data safe and your work uninterrupted.
-          </p>
-        </div>
-        <div class="w-full order-1 lg:w-1/2">
-          <div class="flex justify-center">
-            <img src="./assets/" alt="secure-reliable" />
-          </div>
-        </div>
+      <div class="h-90 w-100 hover:scale-105 transition-transform duration-300 rounded-xl shadow-xl bg-white"> 
+        <img class="rounded-tl-xl rounded-tr-xl" src="assets/images/screenshots/dashboard.png" alt="dashboard">
+        <h1 class="px-5 pt-3 text-xl">Secure & Reliable</h1>
+        <p class="px-5 pt-2 text-md">Enterprise-grade security, consistent uptime, and 24/7 customer support — so your business runs smoothly without disruption.</p>
       </div>
+    
     </div>
-  </div>
-</section>
-
-<!-- pricing -->
-<section id="pricing" class="pt-16">
-  <h2 class="sec-heading"><span class="sec-heading-gradient">Pricing</span></h2>
-
-  <div class="flex justify-center prici">
-    <mat-button-toggle-group
-      name="pricingPlan"
-      aria-label="Pricing Plan"
-      [hideSingleSelectionIndicator]="true"
-      [value]="planRange()"
-      (valueChange)="updatePlanRange($event)"
-      class="billing-toggle"
-    >
-      <mat-button-toggle value="monthly">Monthly</mat-button-toggle>
-      <mat-button-toggle value="annually">Annually</mat-button-toggle>
-    </mat-button-toggle-group>
-  </div>
-
-  <div class="container mx-auto px-6 lg:px-2 flex justify-center gap-15">
-    <app-pricing-component [pricing]="economyPlan"></app-pricing-component>
-    <app-pricing-component [pricing]="premiumPlan"></app-pricing-component>
-    <app-pricing-component [pricing]="plusPlan"></app-pricing-component>
-    <app-pricing-component [pricing]="customerPlan"></app-pricing-component>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="pt-16">
-  <h2 class="sec-heading"><span class="sec-heading-gradient">Frequently Asked Questions</span></h2>
-  <div class="container mx-auto px-6 flex justify-center">
-    <app-faq-component></app-faq-component>
-  </div>
-</section>
-
-<!-- contact -->
-<section id="contact" class="pt-16"></section>
-
-<app-footer-component></app-footer-component>
-
-<!-- Footer -->
-<!-- <footer id="contact" class="text-center bg-[#fafafa] py-6 text-[#4F4F4F] font-Montserrat">
-  <p class="text-sm md:text-base">
-    &copy; 2025
-    <a
-      href="https://mindhoot.com/"
-      target="_blank"
-      class="text-[#1C8DA3] font-semibold hover:underline"
-      >MindHoot Labs.</a
-    >
-    All rights reserved
-  </p>
-</footer> -->
+  </section>
+</div>
