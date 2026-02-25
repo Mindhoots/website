@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { CarouselComponent } from '../../shared/carousel-component/carousel-component';
 import { PricingComponent } from '../pricing-component/pricing-component';
 import { FaqComponent } from '../faq-component/faq-component';
-import { FooterComponent } from '../footer-component/footer-component';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 
 @Component({
   selector: 'app-tm-component',
-  imports: [PricingComponent, FaqComponent, FooterComponent, MatButtonToggleModule,],
+  imports: [MatButtonToggleModule, CarouselComponent, PricingComponent, FaqComponent],
   templateUrl: './tm-component.html',
   styleUrl: './tm-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -22,6 +22,10 @@ export class TmComponent {
 
   goToNewTab() {
     window.open('http://mindhootlabs.cloud:8080/', '_blank');
+  }
+
+  contactSales() {
+
   }
 
   /// amount in dollars

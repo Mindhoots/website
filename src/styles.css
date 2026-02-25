@@ -60,6 +60,10 @@
     @apply inline-flex px-6 py-2 pb-0 font-popps text-white bg-linear-to-r from-[#0a353d] to-[#1c8da3] rounded-md;
   }
 
+  .tm-button {
+    @apply py-2 px-3 cursor-pointer bg-linear-to-r from-[#0a353d] to-[#1c8da3] rounded-lg text-white text-center;
+  }
+
   .btn-animation {
     @apply order-2 ml-5 my-auto  duration-500  -translate-x-3;
   }
@@ -115,6 +119,7 @@
 
 .mat-expansion-panel {
   margin-bottom: 12px !important;
+  
 }
 
 :root {

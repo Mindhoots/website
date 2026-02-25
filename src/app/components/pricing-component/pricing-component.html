@@ -1,34 +1,22 @@
-<!-- <table class="border rounded-lg overflow-hidden">
-  <thead >
-    <tr>
-      <th class="px-4 py-3 text-center text-sm font-semibold text-gray-700">Economy</th>
-    </tr>
-  </thead>
+<div class="font-ibm rounded-xl w-80 h-130 p-12 shadow-xl bg-white hover:scale-105 transition-transform duration-300">
+  <div>
+    <div class="text-xl text-center">{{ pricing()?.name }}</div>
+    <div class="sec-heading-gradient text-4xl mb-12 text-center">&#36;{{ pricing()?.amount }}</div>
+  </div>
+  <div class="flex flex-col items-start">
+    @for (detail of pricing()?.details; track detail) {
+      <div class="flex justify-center items-start mb-6">
+        <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+        <p class="ml-3">{{ detail }}</p>
+      </div>
+    }
+  </div>
 
-  <tbody class="divide-gray-200">
-    <div>
-      <tr *ngFor="let detail of tableDetails">
-        <td>
-          <div class="flex justify-center">
-            <svg
-              class="h-lh w-5.5 shrink-0"
-              viewBox="0 0 22 22"
-              fill="none"
-              stroke-linecap="square"
-            >
-              <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-              <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-              <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-            </svg>
-            <p class="ml-3">Testing data</p>
-          </div>
-        </td>
-      </tr>
-    </div>
-  </tbody>
-</table> -->
+  <div class="tm-button mt-2 hover:bg-[#0a353d] transition-colors duration-300 active:scale-95">Request a Demo</div>
 
-<div class="bg-[#e9f8fb] rounded-[26px] flex flex-col justify-center items-center w-fit h-110 p-12">
+</div>
+
+<!-- <div class="bg-[#e9f8fb] rounded-[26px] flex flex-col justify-center items-center w-fit h-110 p-12">
   @if(pricing()?.amount == "") {
     <div>
       <div class="text-4xl text-[#1c8da3] mb-12 text-center">{{ pricing()?.name }}</div>
@@ -42,20 +30,9 @@
   <mat-divider></mat-divider>
   @for (detail of pricing()?.details; track detail) {
     <div class="flex justify-center items-start mb-6">
-      <svg class="h-lh w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-        <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-        <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-        <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-      </svg>
+      <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
       <p class="ml-3">{{detail}}</p>
     </div>
   }
-  <!-- <div class="flex justify-center mb-6" *ngFor="let detail of pricing()?.details">
-    <svg class="h-lh w-5.5 shrink-0" viewBox="0 0 22 22" fill="none" stroke-linecap="square">
-      <circle cx="11" cy="11" r="11" class="fill-sky-400/25" />
-      <circle cx="11" cy="11" r="10.5" class="stroke-sky-400/25" />
-      <path d="M8 11.5L10.5 14L14 8" class="stroke-sky-800 dark:stroke-sky-300" />
-    </svg>
-    <p class="ml-3">Testing data</p>
-  </div> -->
-</div>
+
+</div> -->

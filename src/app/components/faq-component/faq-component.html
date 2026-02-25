@@ -1,21 +1,6 @@
-<!-- <div class="space-y-4">
-  <div class="border border-gray-200 rounded-lg">
-    <button
-      class="w-full flex justify-between items-center px-5 py-4 text-left font-medium text-gray-800 focus:outline-none"
-      onclick="toggleFaq(this)"
-    >
-      <span>What is this task manager used for?</span>
-      <span class="text-xl">+</span>
-    </button>
-    <div class="hidden px-5 pb-4 text-gray-600">
-      This task manager helps you organize tasks, track progress, and improve productivity by
-      keeping everything in one place.
-    </div>
-  </div>
-</div> -->
 
 <mat-accordion *ngFor="let itm of questions">
-  <mat-expansion-panel>
+  <mat-expansion-panel class="mat-elevation-z0 shadow-md">
   <!-- <mat-expansion-panel (opened)="(itm.isOpened == true)" (closed)="(itm.isOpened == false)"> -->
     <mat-expansion-panel-header>
       <mat-panel-title> {{ itm.question }} </mat-panel-title>
