@@ -1,13 +1,14 @@
-
-<mat-accordion *ngFor="let itm of questions">
-  <mat-expansion-panel class="mat-elevation-z0 shadow-md">
-  <!-- <mat-expansion-panel (opened)="(itm.isOpened == true)" (closed)="(itm.isOpened == false)"> -->
-    <mat-expansion-panel-header>
-      <mat-panel-title> {{ itm.question }} </mat-panel-title>
-      <!-- <mat-panel-description>
-        Currently I am {{ panelOpenState() ? 'open' : 'closed' }}
-      </mat-panel-description> -->
-    </mat-expansion-panel-header>
-    <p>{{ itm.answer }}</p>
-  </mat-expansion-panel>
-</mat-accordion>
+<div class="font-ibm">
+  <mat-accordion *ngFor="let itm of questions">
+    <mat-expansion-panel class="mat-elevation-z0 shadow-md bg-white">
+      <!-- <mat-expansion-panel (opened)="(itm.isOpened == true)" (closed)="(itm.isOpened == false)"> -->
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{ itm.question }} </mat-panel-title>
+          <!-- <mat-panel-description>
+            Currently I am {{ panelOpenState() ? 'open' : 'closed' }}
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <p>{{ itm.answer }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
