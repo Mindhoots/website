@@ -182,17 +182,42 @@
     </div>
   </section>
 
-  <section class="mx-auto mt-40 lg:w-1/2 flex flex-col justify-center">
+  <section class="mx-auto mt-40 lg:w-2/3 flex flex-col justify-center">
     <h1 class="text-5xl mb-4 font-semibold">FAQs</h1>
     <app-faq-component></app-faq-component>
   </section>
 
   <!-- contact -->
-  <section class="mx-auto mt-15 pb-10 w-full flex flex-col justify-center items-center">
-    <div class="mt-20 rounded-xl w-1/2 p-12 shadow-xl bg-white">
+  <section class="mx-auto mt-15 pb-10 w-full flex gap-20 justify-center items-center">
+    <div class="mt-20 rounded-xl w-1/3 p-12">
+      <h1 class="text-4xl">
+        Talk with our team to see how mindhoot-work manager can fit your needs.
+      </h1>
+      <br /><br />
+      <div class="flex flex-col items-start">
+        <div class="flex justify-center items-center mb-6">
+          <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+          <p class="ml-3 text-lg">Discuss the best solutions to meet your business goals</p>
+        </div>
+        <div class="flex justify-center items-center mb-6">
+          <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+          <p class="ml-3 text-lg">Get Tailored pricing information</p>
+        </div>
+        <div class="flex justify-center items-center mb-6">
+          <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+          <p class="ml-3 text-lg">Enquiry about how our workflow works</p>
+        </div>
+        <div class="flex justify-center items-center mb-6">
+          <i class="fa-solid fa-star sec-heading-gradient text-md"></i>
+          <p class="ml-3 text-lg">For Billing and Technical support</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-20 rounded-xl w-1/3 p-12 shadow-xl bg-white">
       <h1 class="w-full text-center text-4xl">Contact our Team</h1>
       <br />
-      <div [formGroup]="enquiryForms" (ngSubmit)="onSubmitForm()">
+      <app-contact-component></app-contact-component>
+      <!-- <div [formGroup]="enquiryForms" (ngSubmit)="onSubmitForm()">
         <div class="flex gap-10">
           <app-input-component
             type="text"
@@ -211,7 +236,7 @@
             class="w-full"
           ></app-input-component>
         </div>
-        <br />
+        <br/>
         <app-input-component
           type="email"
           label="Work Email*"
@@ -220,7 +245,7 @@
           [required]="true"
           class="w-full"
         ></app-input-component>
-        <br />
+        <br/>
         <app-input-component
           type="text"
           label="Company Name*"
@@ -229,7 +254,7 @@
           [required]="true"
           class="w-full"
         ></app-input-component>
-        <br />
+        <br/>
         <app-input-component
           type="tel"
           label="Mobile Number*"
@@ -238,7 +263,7 @@
           [required]="true"
           class="w-full"
         ></app-input-component>
-        <br />
+        <br/>
         <app-input-component
           type="text"
           label="Company Size*"
@@ -247,7 +272,7 @@
           [required]="true"
           class="w-full"
         ></app-input-component>
-        <br />
+        <br/>
         <div class="flex gap-10">
           <app-input-component
             type="text"
@@ -266,7 +291,7 @@
             class="w-full"
           ></app-input-component>
         </div>
-        <br />
+        <br/>
         <app-input-component
           type="text"
           label="What would like to explore?*"
@@ -275,11 +300,13 @@
           [required]="false"
           class="w-full"
         ></app-input-component>
-        <br />
+        <br/>
         <button type="submit" class="tm-button w-full" [disabled]="!enquiryForms.valid">
           Submit
         </button>
-      </div>
+      </div> -->
     </div>
   </section>
+
 </div>
+<!-- <app-footer-component></app-footer-component> -->

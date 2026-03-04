@@ -6,34 +6,37 @@ import { FaqComponent } from '../faq-component/faq-component';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputComponent } from '../../shared/input-component/input-component';
+import { ContactComponent } from '../../shared/contact-component/contact-component';
+import { FooterComponent } from '../footer-component/footer-component';
 
 @Component({
   selector: 'app-tm-component',
-  imports: [MatButtonToggleModule, CarouselComponent, PricingComponent, FaqComponent, CommonModule, ReactiveFormsModule, FormsModule, InputComponent],
+  imports: [FooterComponent, MatButtonToggleModule, CarouselComponent, PricingComponent, FaqComponent, CommonModule, ReactiveFormsModule, FormsModule, ContactComponent],
   templateUrl: './tm-component.html',
   styleUrl: './tm-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class TmComponent {
-  private formBuilder = inject(FormBuilder);
+  // private formBuilder = inject(FormBuilder);
 
   isYearlyPricing: boolean = true;
 
-  enquiryForms = this.formBuilder.group({
-    firstName: [''],
-    secondName: [''],
-    email: [''],
-    companyName: [''],
-    mobileNo: [''],
-    companySize: [''],
-    jobTitle: [''],
-    enquiry: [''],
-  })
 
-  onSubmitForm() {
+  // enquiryForms = this.formBuilder.group({
+  //   firstName: [''],
+  //   secondName: [''],
+  //   email: [''],
+  //   companyName: [''],
+  //   mobileNo: [''],
+  //   companySize: [''],
+  //   jobTitle: [''],
+  //   enquiry: [''],
+  // })
 
-  }
+  // onSubmitForm() {
+
+  // }
 
 
   updatePricing() {
