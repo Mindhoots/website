@@ -1,21 +1,21 @@
-<footer id="contact" class="text-center w-full py-6 text-[#4F4F4F] font-ibm mx-auto">
-  <div class="flex flex-wrap gap-20 py-20 justify-evenly items-center bg-[#e9f8fb]">
+<footer id="contact" class="text-center w-full py-6 text-black font-ibm mx-auto bg-[#EDF7FF]">
+  <div class="flex flex-wrap gap-20 py-20 justify-evenly items-center bg-[#1c8da3] text-white">
     <!--   footer-left   -->
     <a [routerLink]="['/']" class="text-5xl">MindHoot</a>
 
     <!--   footer-right  -->
     <div class="flex flex-col lg:flex-row items-center gap-20">
       <div class="flex flex-col justify-start items-start gap-2 text-start">
-         <h3 class="underline font-semibold mb-0">Reach Us</h3>
+        <h3 class="underline font-semibold mb-0">Reach Us</h3>
         <div class="flex flex-col justify-between gap-2">
-          <a href="tel:+918148138001" target="_blank">
+          <a href="tel:+918148138001" target="_blank" class="hover:scale-105 transition-transform duration-100 cursor-pointer">
             <div class="flex justify-start items-center">
               <i class="fa-solid fa-phone text-xl"> </i>
               <p class="ml-2">+91-8148138001</p>
             </div>
           </a>
 
-          <a href="mailto:mindhoots@gmail.com" target="_blank">
+          <a href="mailto:mindhoots@gmail.com" target="_blank" class="hover:scale-105 transition-transform duration-100 cursor-pointer">
             <div class="flex justify-start items-center">
               <i class="fa-solid fa-envelope text-xl"></i>
               <p class="ml-2">mindhoots@gmail.com</p>
@@ -23,8 +23,16 @@
           </a>
 
           <div class="flex justify-start gap-5 text-xl">
-            <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><i
+                class="fa-brands fa-linkedin hover:scale-115 transition-transform duration-100 cursor-pointer"
+              ></i
+            ></a>
+            <a href="https://github.com" target="_blank"
+              ><i
+                class="fab fa-github hover:scale-115 transition-transform duration-100 cursor-pointer"
+              ></i
+            ></a>
           </div>
         </div>
       </div>
@@ -32,10 +40,34 @@
       <div class="text-left">
         <h3 class="underline font-semibold mb-2">Legal & Policies</h3>
         <ul class="flex flex-col justify-start items-start">
-          <button matButton (click)="openDialog(0)">Terms & Conditions</button>
-          <button matButton (click)="openDialog(1)">Privacy Policy</button>
-          <button matButton (click)="openDialog(2)">Cancellation & Refund Policy</button>
-          <button matButton (click)="openDialog(3)">Cookie Policy</button>
+          <button
+            matButton
+            class="hover:scale-105 transition-transform duration-100 cursor-pointer"
+            (click)="openDialog(0)"
+          >
+            Terms & Conditions
+          </button>
+          <button
+            matButton
+            class="hover:scale-105 transition-transform duration-100 cursor-pointer"
+            (click)="openDialog(1)"
+          >
+            Privacy Policy
+          </button>
+          <button
+            matButton
+            class="hover:scale-105 transition-transform duration-100 cursor-pointer"
+            (click)="openDialog(2)"
+          >
+            Cancellation & Refund Policy
+          </button>
+          <button
+            matButton
+            class="hover:scale-105 transition-transform duration-100 cursor-pointer"
+            (click)="openDialog(3)"
+          >
+            Cookie Policy
+          </button>
         </ul>
       </div>
     </div>

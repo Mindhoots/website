@@ -47,8 +47,8 @@
   <br />
   <app-input-component
     type="text"
-    label="Company Size*"
-    [control]="enquiryForms.controls.companySize"
+    label="Company Name*"
+    [control]="enquiryForms.controls.companyName"
     [disabled]="false"
     [required]="true"
     class="w-full"
@@ -82,5 +82,5 @@
     class="w-full"
   ></app-input-component>
   <br />
-  <button type="submit" class="tm-button w-full py-3 text-md" [disabled]="!enquiryForms.valid">Submit</button>
+  <button type="submit" class="tm-button w-full py-3 text-md hover:bg-[#0a353d] transition-colors duration-300 active:scale-95" [disabled]="!enquiryForms.valid">Submit</button>
 </div>

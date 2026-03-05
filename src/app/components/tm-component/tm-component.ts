@@ -4,10 +4,11 @@ import { CarouselComponent } from '../../shared/carousel-component/carousel-comp
 import { PricingComponent } from '../pricing-component/pricing-component';
 import { FaqComponent } from '../faq-component/faq-component';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InputComponent } from '../../shared/input-component/input-component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from '../../shared/contact-component/contact-component';
 import { FooterComponent } from '../footer-component/footer-component';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../shared/dialog-component/dialog-component';
 
 @Component({
   selector: 'app-tm-component',
@@ -18,25 +19,55 @@ import { FooterComponent } from '../footer-component/footer-component';
 })
 
 export class TmComponent {
-  // private formBuilder = inject(FormBuilder);
+  readonly dialog = inject(MatDialog);
 
   isYearlyPricing: boolean = true;
 
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: {
+        title: "PRIVACY POLICY",
+        content: [
+          {
+            title: `1. Information We Collect`,
+            message: `We may collect:\n• Name\n• Email address\n• Phone number\n• Company details\n• Project requirements\n• Technical data (IP address, browser type)`,
+          },
+          {
+            title: `2. How We Use Information`,
+            message: `We use collected data to:\n• Respond to inquiries\n• Provide services\n• Improve our website\n• Send updates (if subscribed)\n• We do not sell personal information.`,
+          },
+          {
+            title: `3. Data Protection`,
+            message: `We implement reasonable technical and organizational measures to protect your data.`,
+          },
+          {
+            title: `4. Data Sharing`,
+            message: `We may share data with:\n• Cloud hosting providers\n• Payment processors\n• Legal authorities if required`,
+          },
+          {
+            title: `5. Data Retention`,
+            message: `We retain data only as long as necessary for business or legal purposes.`,
+          },
+          {
+            title: `6. Third-Party Links`,
+            message: `Our website may contain links to third-party websites. We are not responsible for their privacy practices.`,
+          },
+          {
+            title: `7. Your Rights`,
+            message: `Depending on your jurisdiction, you may request:\n• Access to your data\n• Correction of inaccurate data\n• Deletion of your data\n\nTo exercise these rights, contact:`,
+          },
+        ]
+      },
+      restoreFocus: false,
+      autoFocus: false,
+      maxHeight: '90vh',
+    },
+    );
 
-  // enquiryForms = this.formBuilder.group({
-  //   firstName: [''],
-  //   secondName: [''],
-  //   email: [''],
-  //   companyName: [''],
-  //   mobileNo: [''],
-  //   companySize: [''],
-  //   jobTitle: [''],
-  //   enquiry: [''],
-  // })
-
-  // onSubmitForm() {
-
-  // }
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
 
   updatePricing() {

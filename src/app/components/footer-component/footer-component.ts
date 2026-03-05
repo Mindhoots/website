@@ -13,6 +13,7 @@ export class FooterComponent {
 
   readonly dialog = inject(MatDialog);
   readonly companyName = "MindHoot Labs"
+
   readonly policies = [
     {
       title: "TERMS & CONDITIONS",

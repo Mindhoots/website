@@ -217,96 +217,13 @@
       <h1 class="w-full text-center text-4xl">Contact our Team</h1>
       <br />
       <app-contact-component></app-contact-component>
-      <!-- <div [formGroup]="enquiryForms" (ngSubmit)="onSubmitForm()">
-        <div class="flex gap-10">
-          <app-input-component
-            type="text"
-            label="First Name*"
-            [control]="enquiryForms.controls.firstName"
-            [disabled]="false"
-            [required]="true"
-            class="w-full"
-          ></app-input-component>
-          <app-input-component
-            type="text"
-            label="Second Name"
-            [control]="enquiryForms.controls.secondName"
-            [disabled]="false"
-            [required]="false"
-            class="w-full"
-          ></app-input-component>
-        </div>
-        <br/>
-        <app-input-component
-          type="email"
-          label="Work Email*"
-          [control]="enquiryForms.controls.email"
-          [disabled]="false"
-          [required]="true"
-          class="w-full"
-        ></app-input-component>
-        <br/>
-        <app-input-component
-          type="text"
-          label="Company Name*"
-          [control]="enquiryForms.controls.companyName"
-          [disabled]="false"
-          [required]="true"
-          class="w-full"
-        ></app-input-component>
-        <br/>
-        <app-input-component
-          type="tel"
-          label="Mobile Number*"
-          [control]="enquiryForms.controls.mobileNo"
-          [disabled]="false"
-          [required]="true"
-          class="w-full"
-        ></app-input-component>
-        <br/>
-        <app-input-component
-          type="text"
-          label="Company Size*"
-          [control]="enquiryForms.controls.companySize"
-          [disabled]="false"
-          [required]="true"
-          class="w-full"
-        ></app-input-component>
-        <br/>
-        <div class="flex gap-10">
-          <app-input-component
-            type="text"
-            label="Company Size*"
-            [control]="enquiryForms.controls.companySize"
-            [disabled]="false"
-            [required]="true"
-            class="w-full"
-          ></app-input-component>
-          <app-input-component
-            type="text"
-            label="Job Title"
-            [control]="enquiryForms.controls.jobTitle"
-            [disabled]="false"
-            [required]="false"
-            class="w-full"
-          ></app-input-component>
-        </div>
-        <br/>
-        <app-input-component
-          type="text"
-          label="What would like to explore?*"
-          [control]="enquiryForms.controls.enquiry"
-          [disabled]="false"
-          [required]="false"
-          class="w-full"
-        ></app-input-component>
-        <br/>
-        <button type="submit" class="tm-button w-full" [disabled]="!enquiryForms.valid">
-          Submit
-        </button>
-      </div> -->
+      <br />
+      <p class="text-center">
+        By submitting this form, I accept mindhoot <span class="sec-heading-gradient cursor-pointer hover:underline" (click)="openDialog()">Privacy Policy</span> and consent to be contacted by
+        mindhoot.com for marketing and promotional purposes via email, phone, SMS, and other means
+      </p>
     </div>
   </section>
-
 </div>
-<!-- <app-footer-component></app-footer-component> -->
+
+<app-footer-component></app-footer-component>
