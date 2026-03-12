@@ -175,11 +175,8 @@ export class Home {
 
   onProjectClicked(projectTitle: string) {
     if (projectTitle === 'task-manager') {
-      this.router.navigate(['/task-manager'], {
-        fragment: 'overview'
-      });
+      this.router.navigate(['/task-manager']);
     }
-
   }
 
 }
